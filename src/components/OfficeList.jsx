@@ -22,7 +22,7 @@ function OfficeList() {
     },[postOffficeList]);
     
 return (
-    <div className='bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 rounded-lg p-6 w-3/4 mt-2 shadow-lg'>
+    <div className='bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 rounded-lg p-6 w-11/12 md:w-3/4 mt-2 shadow-lg'>
         <div className='flex gap-2 w-full mb-4'>
             <div className="w-1/3">
                 <input
