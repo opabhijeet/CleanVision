@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 
 const garbageIcon = new L.Icon({
-  iconUrl: '../../public/litter.png',
+  iconUrl: '../../litter.png',
   iconSize: [40, 40], 
   iconAnchor: [20, 40],
   popupAnchor: [0, -40],

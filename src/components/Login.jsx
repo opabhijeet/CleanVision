@@ -83,7 +83,7 @@ const Login = () => {
                             login({ email, password });
                         }}
                         className="flex justify-center gap-3 text-white"
-                    >{loading && <img width="24" className='spin' style={{color:'white'}} height="24" src="../../public/loading.svg" alt="progress-indicator"/>}
+                    >{loading && <img width="24" className='spin' height="24" src="../../loading.svg" alt="progress-indicator"/>}
                     {loading==false ? " Log In" : "Loading..."}</button>
                 </form>
             </div>

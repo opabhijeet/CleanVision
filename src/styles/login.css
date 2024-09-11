@@ -1,6 +1,6 @@
 @font-face {
     font-family: Norse;
-    src: url("../../public/Norse-Bold.otf");
+    src: url("../../Norse-Bold.otf");
     font-weight: bold;
 }
 body{
@@ -9,7 +9,7 @@ body{
     margin: 0px;
 }
 .left{
-    background-image: url("../../public/postoffice5.jpg");
+    background-image: url("../../postoffice5.jpg");
     background-position: center;
     background-size:cover;
     width: 60%;
