@@ -16,7 +16,7 @@ const garbageTypeData = [
 const GarbageTypeBarChart = () => {
   return (
     <motion.div
-      className=' h-min w-3/6 bg-opacity-50 backdrop-blur-md shadow-xl rounded-xl p-6 border border-gray-700'
+      className='flex-1 bg-opacity-50 backdrop-blur-md shadow-xl rounded-xl p-6 border border-gray-700'
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}

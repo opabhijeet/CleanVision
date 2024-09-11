@@ -30,19 +30,19 @@ const GarbageDetectionTable = () => {
 
   return (
     <motion.div
-      className=' h-min w-3/6 bg-opacity-50 backdrop-blur-md shadow-xl rounded-xl p-6 border border-gray-700'
+      className='md:w-1/2 w-full bg-opacity-50 backdrop-blur-md shadow-xl rounded-xl p-6 border border-gray-700'
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
        style={{backgroundColor:'#F5EDED'}}
     >
-      <div className='flex justify-between items-center mb-6'>
+      <div className='flex w-full justify-between items-center mb-6'>
         <h2 className='text-xl font-semibold text-black'>Garbage Detection Records</h2>
-        <div className='relative'>
+        <div className='relative w-2/3'>
           <input
             type='text'
             placeholder='Search records...'
-            className='bg-gray-200 text-black placeholder-gray-600 outline-double rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700'
+            className='w-full bg-gray-200 text-black placeholder-gray-600 outline-double rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700'
             value={searchTerm}
             onChange={handleSearch}
           />
@@ -51,7 +51,7 @@ const GarbageDetectionTable = () => {
       </div>
 
       <div className='overflow-x-auto'>
-        <table className='min-w-full divide-y divide-gray-700'>
+        <table className='divide-y divide-gray-700'>
           <thead>
             <tr>
               <th className='px-6 py-3 text-left text-md font-medium text-blue-900 uppercase tracking-wider'>
@@ -77,18 +77,18 @@ const GarbageDetectionTable = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <td className='px-6 py-4 whitespace-nowrap'>
+                <td className='px-6 py-4'>
                   <div className='text-sm font-medium text-black'>{record.place}</div>
                 </td>
-                <td className='px-6 py-4 whitespace-nowrap'>
+                <td className='px-6 py-4'>
                   <div className='text-sm text-black'>{record.type}</div>
                 </td>
-                <td className='px-6 py-4 whitespace-nowrap'>
-                  <div className='text-sm text-black'>
+                <td className='px-6 py-4'>
+                  <div className='text-sm text-black whitespace-nowrap'>
                     {new Date(record.time).toLocaleString()}
                   </div>
                 </td>
-                <td className='px-6 py-4 whitespace-nowrap text-sm text-black'>
+                <td className='px-6 py-4 text-sm text-black'>
                   <button className='text-indigo-400 hover:text-indigo-300 mr-2'>Edit</button>
                   <button className='text-red-400 hover:text-red-300'>Delete</button>
                 </td>
