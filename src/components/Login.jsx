@@ -34,8 +34,8 @@ const Login = () => {
 
     return ( 
         <>
-        <div style={{display: "flex", width: "100%", height: "100vh", margin: "0px"}}
-            className="absolute inset-0 z-50"
+        <div
+            className="wrapper absolute inset-0 z-50"
         >
             <div className="left">
                 <div className="logo">
