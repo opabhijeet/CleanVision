@@ -87,7 +87,7 @@ return (
                                 &&
                                 <tr key={postOffice.key} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700
                                     hover:bg-gray-50 dark:hover:bg-gray-600 cursor-pointer"
-                                    onClick={() => navigate(`/dashboard/${postOffice.key}`)}
+                                    onClick={() => navigate(`/home/dashboard/${postOffice.key}`)}
                                 >
                                     <td className="px-6 py-4">{postOffice.name}</td>
                                     <td className="px-6 py-4">{postOffice.pincode}</td>

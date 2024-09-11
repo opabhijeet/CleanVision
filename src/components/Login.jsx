@@ -35,7 +35,7 @@ const Login = () => {
     return ( 
         <>
         <div
-            className="wrapper absolute inset-0 z-50"
+            className="wrapper"
         >
             <div className="left">
                 <div className="logo">
@@ -69,7 +69,7 @@ const Login = () => {
                             <label htmlFor="email">EMAIL<span style={{color:'red', fontSize: '1.25em'}}>*</span></label>
                             <input type="email" id="email" name="email" maxLength="50"
                             placeholder="Enter your email"
-                            required="true"
+                            required={true}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             />  
@@ -78,7 +78,7 @@ const Login = () => {
                             <label htmlFor="password">PASSWORD<span style={{color:'red', fontSize: '1.25em'}}>*</span></label>
                             <input type="password" id="password" name="password" maxLength="20"
                                 placeholder="Enter your password"
-                                required="true"
+                                required={true}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />

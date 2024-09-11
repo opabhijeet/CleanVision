@@ -5,7 +5,6 @@
 }
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 140vh; 
     margin: 0px;
 }
 .wrapper{
@@ -126,5 +125,15 @@ button[type="submit"]{
     }
     .left{
       width: 100%;
+      height: fit-content;
+    }
+    .logo{
+      height: 30%;
+    }
+}
+@media (max-width: 600px) {
+    .logo{
+        font-size: 3em;
+        height: 40%;
     }
 }

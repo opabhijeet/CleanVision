@@ -35,7 +35,7 @@ function Header() {
               anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }}
             >FAQ</div>
-            <Link to='/register' className="inline-block px-6 py-2 duration-200 hover:bg-blue-200 hover:text-white rounded-full cursor-pointer">Register</Link>
+            <Link to='/home/register' className="inline-block px-6 py-2 duration-200 hover:bg-blue-200 hover:text-white rounded-full cursor-pointer">Register</Link>
           </div>
           <Link to='/home' className="w-full text-gray-700 flex items-center justify-center md:text-center text-2xl font-semibold cursor-pointer">
             <img src="../../India2.png" alt="" className='h-10' />

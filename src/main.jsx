@@ -10,38 +10,34 @@ import {Home, Login, Signup, DashBoard, AddPostOffice} from './components'
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <Login />,
+  },
+  {
+    path: '/home',
     element: <App />,
     children: [
-      {
-        path: '/',
-        element: <Login />
-      },
-      {
-        path: '/login',
-        element: <Login />
-      },
       {
         path: '/home',
         element: <Home />
       },
       {
-        path: '/signup',
+        path: '/home/signup',
         element: <Signup />
       },
       {
-        path: "/dashboard/:slug",
+        path: "/home/dashboard/:slug",
         element: <DashBoard />
       },
       {
-        path: "/register",
+        path: "/home/register",
         element: <AddPostOffice/>
       },
       {
-        path: '/addPostOffice',
+        path: '/home/addPostOffice',
         element: <AddPostOffice />
       }
     ]
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -26,11 +26,11 @@ const Footer = () => {
             <div className="footer-column">
               <div className="footer-links">
                 <h3>Useful Links</h3>
-                <a href="/">Home</a>
-                <a href="/aboutus">About</a>
-                <a href="/services">Products & Services</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products & Services</a>
                 <a href="#">Client Testimonials</a>
-                <a href="/contact">Contact Us</a>
+                <a href="#">Contact Us</a>
               </div>
             </div>
             <div className="footer-column">
