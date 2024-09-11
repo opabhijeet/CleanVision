@@ -42,6 +42,9 @@ const Login = () => {
                     Login to access full features of our website.
                     <br/>
                     Login in <em>now</em> to get started.
+                    <br/>
+                    Test login ID: first@gmail.com
+                    Test login password: firstpass
                     <br/><br/>
                 </p>
                 <form>
