@@ -28,8 +28,16 @@ return (
                 <input
                     type="text"
                     id="state"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className="w-full invisible sm:visible px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                     placeholder="Search by state"
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                />
+                <input
+                    type="text"
+                    id="state"
+                    className="w-full sm:hidden px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    placeholder="State"
                     value={state}
                     onChange={(e) => setState(e.target.value)}
                 />
@@ -38,8 +46,16 @@ return (
                 <input
                     type="text"
                     id="district"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className="w-full invisible sm:visible px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                     placeholder="Search by district"
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                />
+                <input
+                    type="text"
+                    id="district"
+                    className="w-full sm:hidden px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    placeholder="District"
                     value={district}
                     onChange={(e) => setDistrict(e.target.value)}
                 />
@@ -48,8 +64,16 @@ return (
                 <input
                     type="text"
                     id="pincode"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    className="w-full invisible sm:visible px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                     placeholder="Search by pin code"
+                    value={pincode}
+                    onChange={(e) => setPincode(e.target.value)}
+                />
+                <input
+                    type="text"
+                    id="pincode"
+                    className="w-full sm:hidden px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    placeholder="PinCode"
                     value={pincode}
                     onChange={(e) => setPincode(e.target.value)}
                 />
