@@ -68,6 +68,7 @@ const Login = () => {
                         <div id="line">
                             <label htmlFor="email">EMAIL<span style={{color:'red', fontSize: '1.25em'}}>*</span></label>
                             <input type="email" id="email" name="email" maxLength="50"
+                            style={{ borderColor: email.length === 0 ? "rgb(192, 190, 190)" : undefined }}
                             placeholder="Enter your email"
                             required={true}
                             value={email}
@@ -77,6 +78,7 @@ const Login = () => {
                         <div id="line">
                             <label htmlFor="password">PASSWORD<span style={{color:'red', fontSize: '1.25em'}}>*</span></label>
                             <input type="password" id="password" name="password" maxLength="20"
+                                style={{ borderColor: password.length === 0 ? "rgb(192, 190, 190)" : undefined }}
                                 placeholder="Enter your password"
                                 required={true}
                                 value={password}
