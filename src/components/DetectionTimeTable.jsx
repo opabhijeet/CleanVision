@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
 
 const garbageDetectionData = [
-  // { id: 0, place: "Outdoor Area", type: "Food Waste", time: "2024-09-26T13:30:00Z" },
+  { id: 0, place: "Outdoor Area", type: "Food Waste", time: "2024-09-26T13:30:00Z" },
   { id: 1, place: "Storage Room", type: "Plastic", time: "2024-09-26T04:30:00Z" },
   { id: 2, place: "Lobby", type: "Organic", time: "2024-09-26T03:30:00Z" },
   { id: 3, place: "Entrance", type: "Paper", time: "2024-09-26T02:45:00Z" },
