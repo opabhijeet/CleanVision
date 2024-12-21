@@ -5,13 +5,23 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import {Home, Login, Signup, DashBoard, AddPostOffice} from './components'
+import {Home, Login, Signup, DashBoard, AddPostOffice, GivePermission} from './components'
+import PostOfficeForm from './components/PostOfficeForm.jsx'
 import AuthLayout from './components/AuthLayout.jsx'
+import ComplaintForm from './components/ComplaintForm.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Login />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/signup',
+    element: <Signup />
   },
   {
     path: '/home',
@@ -25,10 +35,6 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/home/signup',
-        element: <Signup />
-      },
-      {
         path: "/home/dashboard/:slug",
         element: <DashBoard />
       },
@@ -39,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: '/home/addPostOffice',
         element: <AddPostOffice />
+      },
+      {
+        path: '/home/permission',
+        element: <GivePermission />
+      },
+      {
+        path: '/home/raise-complaint',
+        element: <ComplaintForm />
+      },
+      {
+        path: '/home/postform',
+        element: <PostOfficeForm />
       }
     ]
   },
