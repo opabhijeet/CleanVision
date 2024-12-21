@@ -24,6 +24,10 @@ const router = createBrowserRouter([
     element: <Signup />
   },
   {
+    path: '/postform',
+    element: <PostOfficeForm />
+  },
+  {
     path: '/home',
     element: 
     <AuthLayout authentication={true}>
@@ -54,10 +58,6 @@ const router = createBrowserRouter([
         path: '/home/raise-complaint',
         element: <ComplaintForm />
       },
-      {
-        path: '/home/postform',
-        element: <PostOfficeForm />
-      }
     ]
   },
 ])
