@@ -58,10 +58,18 @@ function OfficeList() {
             );
         })
         .sort((a, b) => {
-            const compliantA = postOfficeList[a]?.compliant || 0;
-            const compliantB = postOfficeList[b]?.compliant || 0;
+            const postOfficeA = postOfficeList[a] || {};
+            const postOfficeB = postOfficeList[b] || {};
+            const compliantA = postOfficeA.compliant || 0;
+            const nonCompliantA = postOfficeA['non-compliant'] || 0;
+            const compliantB = postOfficeB.compliant || 0;
+            const nonCompliantB = postOfficeB['non-compliant'] || 0;
+            const complianceScoreA = (compliantA + nonCompliantA) > 0 ? (compliantA * 100) / (compliantA + nonCompliantA) : 0;
+            const complianceScoreB = (compliantB + nonCompliantB) > 0 ? (compliantB * 100) / (compliantB + nonCompliantB) : 0;
 
-            return sortOrder === 'ascending' ? compliantA - compliantB : compliantB - compliantA;
+            return sortOrder === 'ascending'
+                ? complianceScoreA - complianceScoreB
+                : complianceScoreB - complianceScoreA;
         });
 
     return (
@@ -126,7 +134,7 @@ function OfficeList() {
                             filteredAndSortedPostOffices.map((postOfficeKey, index) => {
                                 const isTopFive = index < 5;
                                 const postOffice = postOfficeList[postOfficeKey] || {};
-                                const { postal_div = '', postal_reg = '', pincode = '', address = '', compliant = 0 } = postOffice;
+                                const { postal_div = '', postal_reg = '', pincode = '', address = '', compliant = 0, ['non-compliant']: nonCompliant = 0 } = postOffice;
                                 const rowColor = sortOrder === 'ascending' ? (isTopFive ? 'bg-red-100 hover:bg-red-200' : '') : (isTopFive ? 'bg-green-100 hover:bg-green-200' : '');
 
                                 return (
@@ -136,7 +144,7 @@ function OfficeList() {
                                         <td className="px-6 py-4">{pincode}</td>
                                         <td className="px-6 py-4">{postal_div}</td>
                                         <td className="px-6 py-4">{postal_reg}</td>
-                                        <td className="px-6 py-4">{compliant}</td>
+                                        <td className="px-6 py-4">{(compliant*100)/(compliant+nonCompliant)}</td>
                                     </tr>
                                 );
                             })
