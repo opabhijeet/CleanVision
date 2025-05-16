@@ -144,7 +144,7 @@ function OfficeList() {
                                         <td className="px-6 py-4">{pincode}</td>
                                         <td className="px-6 py-4">{postal_div}</td>
                                         <td className="px-6 py-4">{postal_reg}</td>
-                                        <td className="px-6 py-4">{(compliant*100)/(compliant+nonCompliant)}</td>
+                                        <td className="px-6 py-4">{(compliant + nonCompliant > 0 ? Math.round((compliant * 100) / (compliant + nonCompliant)) : 0)}</td>
                                     </tr>
                                 );
                             })
