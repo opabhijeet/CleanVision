@@ -26,8 +26,9 @@ const AlertSystem = () => {
               alert('Error generating alert');
             }
           }}  
-          className="w-full p-15 rounded-lg mb-12"
+          className="w-full p-15 rounded-lg mb-12 h-8 bg-green-500"
         >
+          Alert
         </button>
       </div>
     </>
