@@ -7,16 +7,25 @@ const AlertSystem = () => {
       <div className='flex justify-center'>
         <button
           onClick={async ()=> {
-            const response = await fetch('http://localhost:3000/alert', {
+            const response = await fetch('https://emailalert-cerf.onrender.com/alert', {
               method: 'POST',
               headers: {
-                'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                email: 'sihbgp2024@gmail.com',
-                subject: 'Garbage Alert',
-                body: 'Garbage detected in the post office premises. Please take immediate action to maintain cleanliness. Plastic: 1 Organic: 2 Food Waste: 5. Link: https://localhost:5173/home/postform',
-                phone: '+916386909300'
+              email: 'sihbgp2024@gmail.com',
+              subject: 'Garbage Alert',
+              html: `
+                <div style="font-family: Arial, sans-serif; color: #222;">
+                <h2>Garbage Alert</h2>
+                <p>Garbage detected in the post office premises. Please take immediate action to maintain cleanliness.</p>
+                <ul>
+                  <li><strong>Plastic:</strong> 1</li>
+                  <li><strong>Organic:</strong> 2</li>
+                  <li><strong>Food Waste:</strong> 5</li>
+                </ul>
+                </div>
+              `,
               }),
             });
             if(response.status === 200){
